@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>Pause</h2>
+  <p>Your character is exhausted. Rest and come back stronger.</p>
+
+  <div class="mb-3">
+    <span>💵 Money: <strong>{{ p.money }}</strong></span> &nbsp;|&nbsp;
+    <span>🗣 English: <strong>{{ p.english }}</strong></span> &nbsp;|&nbsp;
+    <span>⚡ Energy: <strong>{{ p.energy }}</strong></span> &nbsp;|&nbsp;
+    <span>🙂 Mood: <strong>{{ p.mood }}</strong></span>
+  </div>
+
+  <form method="post" action="/rest">
+    <button class="btn btn-primary">Rest (5 days)</button>
+  </form>
+  <p class="mt-4 text-muted small">{{ msg }}</p>
+{% endblock %}
